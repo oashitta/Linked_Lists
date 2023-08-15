@@ -7,9 +7,14 @@ class LinkedList {
 
   // returns last element
   tail() {
-    let tmp = this.head;
-    while (tmp.next != null) tmp = tmp.next;
-    return tmp;
+    let current = this.head;
+    while (current.next != null) current = current.next;
+    return current;
+  }
+
+  // returns first element
+  getHead() {
+    return this.head;
   }
 
   // adds a new node and the start of list
