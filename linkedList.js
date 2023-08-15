@@ -1,0 +1,84 @@
+class LinkedList {
+  constructor() {
+    // first element in list
+    this.head = null
+    this.length = 0
+    // this.tail = null
+  }
+
+  // adds a new node and the start of list
+  prepend(value) {
+    // data is the value of the new list being created. thi.head is value of next, which means that the existing head becomes the next element when a new head is created. 
+    const newNode = new LinkedListNode(value, this.head)
+    this.head = newNode
+    this.length++
+  }
+  // adds a new node and the start of list
+  // append(value) {
+  //   const newNode = new LinkedListNode(value, this.tail )
+  // }
+
+  getByIndex(index) {
+    if (index < 0 || index >= this.length) return null
+
+    let current = this.head
+    for (let i = 0; i < index; i++){
+      current = current.next
+    }
+    return current
+  }
+
+  insertAtIndex(index, value) {
+    if (index === 0) return this.prepend(value)
+
+    // value before the index we want to insert at.
+    const prev  = this.getByIndex(index - 1)
+    if (prev == null) return null
+
+    // set the value of the next reference in the prev node to the new value and value of the next referenc in the new value(index) to prev.next(i.e. prev surrent next value).
+    prev.next = new LinkedListNode(value, prev.next)
+    this.length++
+  }
+
+  removeHead() {
+    this.head = this.head.next
+    this.length--
+  }
+
+  // removeTail() {
+  //   this.tail = this.head.prev
+  //   this.length--
+  // }
+
+  // helper function to print linkedlist
+  print() {
+    let output = ""
+    let current = this.head
+
+    while(current) {
+      output = `${output}${current.value} -> `
+      current = current.next
+    }
+    console.log(`${output}null`)
+  }
+
+}
+
+class LinkedListNode {
+  constructor(value, next) {
+    this.value = value
+    this.next = next
+  }
+}
+
+// a helper function that allows the creation of a linked list from an array of values. to provide info for testing.
+LinkedList.fromValues = function(...values) {
+  const ll = new LinkedList()
+  // starting from the end of the array because we are appending elements to the begining of the list
+  for (let i = values.length -1; i >= 0; i --) {
+    ll.prepend(values[i])
+  }
+  return ll
+}
+
+module.exports = LinkedList

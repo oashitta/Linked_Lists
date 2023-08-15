@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1692102040003" clover="3.2.0">
+  <project timestamp="1692102040003" name="All files">
+    <metrics statements="31" coveredstatements="25" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="7" elements="47" coveredelements="40" complexity="0" loc="31" ncloc="31" packages="1" files="1" classes="1"/>
+    <file name="linkedList.js" path="/Users/motunde/Documents/Odin_Project/linked_list/linkedList.js">
+      <metrics statements="31" coveredstatements="25" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="7"/>
+      <line num="4" count="10" type="stmt"/>
+      <line num="5" count="10" type="stmt"/>
+      <line num="12" count="29" type="stmt"/>
+      <line num="13" count="29" type="stmt"/>
+      <line num="14" count="29" type="stmt"/>
+      <line num="22" count="8" type="cond" truecount="4" falsecount="0"/>
+      <line num="24" count="4" type="stmt"/>
+      <line num="25" count="4" type="stmt"/>
+      <line num="26" count="6" type="stmt"/>
+      <line num="28" count="4" type="stmt"/>
+      <line num="32" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="35" count="3" type="stmt"/>
+      <line num="36" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="40" count="1" type="stmt"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="55" count="0" type="stmt"/>
+      <line num="56" count="0" type="stmt"/>
+      <line num="58" count="0" type="stmt"/>
+      <line num="59" count="0" type="stmt"/>
+      <line num="60" count="0" type="stmt"/>
+      <line num="62" count="0" type="stmt"/>
+      <line num="69" count="30" type="stmt"/>
+      <line num="70" count="30" type="stmt"/>
+      <line num="75" count="1" type="stmt"/>
+      <line num="76" count="9" type="stmt"/>
+      <line num="78" count="9" type="stmt"/>
+      <line num="79" count="26" type="stmt"/>
+      <line num="81" count="9" type="stmt"/>
+      <line num="84" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
