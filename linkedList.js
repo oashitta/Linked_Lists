@@ -2,8 +2,13 @@ class LinkedList {
   constructor() {
     // first element in list
     this.head = null
-    this.length = 0
-    // this.tail = null
+    this.length = 0 
+  }
+
+  tail() {
+    let tmp = this.head;
+    while (tmp.next != null) tmp = tmp.next;
+    return tmp;
   }
 
   // adds a new node and the start of list
@@ -11,12 +16,23 @@ class LinkedList {
     // data is the value of the new list being created. thi.head is value of next, which means that the existing head becomes the next element when a new head is created. 
     const newNode = new LinkedListNode(value, this.head)
     this.head = newNode
+   
     this.length++
   }
   // adds a new node and the start of list
-  // append(value) {
-  //   const newNode = new LinkedListNode(value, this.tail )
-  // }
+  append(value) {
+    const newNode = new LinkedListNode(value, null)
+
+    if (this.head == null) this.prepend(value)
+   
+    while (this.head.next != null) {
+      this.head = this.head.next
+    }
+    this.tail = newNode
+    this.length++
+    return newNode;
+  }
+
 
   getByIndex(index) {
     if (index < 0 || index >= this.length) return null
@@ -55,7 +71,10 @@ class LinkedList {
     this.length--
   }
 
-  // removeTail() {
+ 
+
+  // remove tail
+  // pop() {
   //   this.tail = this.head.prev
   //   this.length--
   // }

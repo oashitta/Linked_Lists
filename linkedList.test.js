@@ -16,18 +16,15 @@ describe('#prepend', ()=> {
 })
 
 // add to tail
-// describe('#append', () => {
-//   test('it adds the element to the end for the list', ()=> {
-//     const ll = new linkedList.fromValues(10, 20, 30, 40)
-//     ll.append(80)
-//     const oldTail = ll.tail
-//     ll.append(90)
+describe('#append', () => {
+  test('it adds the element to the end for the list', ()=> {
+    const ll = new linkedList.fromValues(10, 20, 30, 40)
+    ll.append(50)
 
-//     expect(ll.tail.value).toBe(90)
-//     expect(ll.head.next).toBe(oldTail)
-//     expect(ll.length).toBe(6)
-//   })
-// })
+    expect(ll.tail.value).toBe(50)
+    expect(ll.length).toBe(5)
+  })
+})
 
 
 describe('#getByIndex', () => {
@@ -166,8 +163,8 @@ describe('#removeAtIndex', () => {
 })
 
 
-
-// describe('#removeTail', () => {
+// removes last element from list
+// describe('#pop', () => {
 //   test('remove the tail', () => {
 //     const ll = LinkedList.fromValues(10, 20, 30, 40)
 //     ll.removeTail()
