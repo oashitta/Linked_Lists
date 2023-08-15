@@ -80,10 +80,18 @@ class LinkedList {
  
 
   // remove tail
-  // pop() {
-  //   this.tail = this.head.prev
-  //   this.length--
-  // }
+  pop() {
+    let current = this.head
+    let prev = null 
+
+    while (current.next != null){
+      prev = current
+      current = current.next
+    }
+    prev.next = null
+    this.length--
+    return current
+  }
 
   // helper function to print linkedlist
   printToString() {
