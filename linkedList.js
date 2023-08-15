@@ -5,6 +5,7 @@ class LinkedList {
     this.length = 0 
   }
 
+  // returns last element
   tail() {
     let tmp = this.head;
     while (tmp.next != null) tmp = tmp.next;
@@ -80,7 +81,7 @@ class LinkedList {
   // }
 
   // helper function to print linkedlist
-  print() {
+  printToString() {
     let output = ""
     let current = this.head
 
