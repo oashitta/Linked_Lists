@@ -1,5 +1,5 @@
 # LINKED LIST
-Singly Linked List implemented with JavaScript
+Singly Linked List implemented with JavaScript and Jest for testing
 
 ## Features
 
