@@ -15,6 +15,8 @@ const ll2 = new LinkedList.fromValues(10, 20, 30, 40)
 // console.log(ll2.getByIndex(0).next) 
 
 ll2.print()
-ll2.insertAtIndex(2, 90)
+ll2.removeAtIndex(2)
+// ll2.removeHead()
+// ll2.insertAtIndex(2, 90)
 // ll2.insertAtIndex(-1, 90) // cannot insert at the tail this way
 ll2.print()

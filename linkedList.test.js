@@ -115,12 +115,57 @@ describe('#removeHead', () => {
     const ll = LinkedList.fromValues(10, 20, 30)
     ll.removeHead()
 
-    expect(ll.head).toBe(20)
+    expect(ll.head.value).toBe(20)
     expect(ll.length).toBe(2)
   })
 })
 
-// describe('#removeAtIndex', () => {})
+describe('#removeAtIndex', () => {
+  describe('with index < 0', () => {
+    test('it does not remove anything', () => {
+      const ll = linkedList.fromValues(10, 20)
+      ll.removeAtIndex(-1)
+  
+      expect(ll.length).toBe(2)
+    })
+  })
+
+  describe('with index > list length', () => {
+    test('it does not remove anything', () => {
+      const ll = linkedList.fromValues(10, 20)
+      ll.removeAtIndex(5)
+
+      expect(ll.length).toBe(2)
+    })
+  })
+
+  describe('with index 0', () => {
+    test('it removes at head', () => {
+      const ll = linkedList.fromValues(10, 20, 30)
+      ll.removeHead(0)
+  
+      expect(ll.head.value).toBe(20)
+      expect(ll.head.next.value).toBe(30)
+      expect(ll.length).toBe(2)
+    })
+  })
+
+  describe('with index in the middle', () => {
+    test('it removes at specified index', () => {
+      const ll = linkedList.fromValues(10, 20, 30, 40)
+      ll.removeAtIndex(2)
+      const node = ll.getByIndex(1)
+
+      expect(node.value).toBe(20)
+      expect(node.next.value).toBe(40)
+      expect(ll.length).toBe(3)
+
+    })
+  })
+ 
+})
+
+
 
 // describe('#removeTail', () => {
 //   test('remove the tail', () => {
